@@ -25,4 +25,16 @@ print("-" * 30)
 for stock , qty in portfolio.items():
     value = stock_prices[stock] * qty
     print(f"{stock}: {qty} shares x ${stock_prices[stock]} = ${value}")
-    total_value 
+    total_value += value
+print("-" * 30)
+print(f"Total Investment Value: ${total_value}")
+#optional : save to text file
+with open("portfolio_report.txt", "w") as file:
+     file.write("Your Portfolio:\n")
+     file.write("-" * 30 + "\n")
+     for stock, qty in portfolio.items():
+         value = stock_prices[stock] *qty\
+          file.write(f"{stock}: {qty} shares x ${stock_prices[stock]} = ${value}\n")
+     file.write("-" * 30 + "\n")
+     file.write(f"Total Investment Value: ${total_value}\n")
+
