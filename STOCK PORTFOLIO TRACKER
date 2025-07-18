@@ -18,5 +18,11 @@ for i in range(n):
        portfolio[stock] = quantity
   else:
       print(f"{stock} is not available in our stock list.")
-
-
+#Calculate tptal investment 
+total_value = 0
+print("\nYour Portfolio:")
+print("-" * 30)
+for stock , qty in portfolio.items():
+    value = stock_prices[stock] * qty
+    print(f"{stock}: {qty} shares x ${stock_prices[stock]} = ${value}")
+    total_value 
