@@ -5,4 +5,18 @@ stock_prices = {
   "MSFT": 320
 }
 
-#DICTIONIORY TO STORE USER'S STOCK PRICES 
+#DICTIONIORY TO STORE USER'S STOCK QUANTITY
+portfolio = {}
+#Input number of stocks user wants to add
+n = int(input("How many different stocks do you want to enter? "))
+
+#Taking user input for stocks and quantity
+for i in range(n):
+  stock = input(f"Enter stock name ({i+1}): ").upper()
+  if stock in stock_prices:
+      quantity = int(input(f"Enter quantity of {stock}: "))
+       portfolio[stock] = quantity
+  else:
+      print(f"{stock} is not available in our stock list.")
+
+
